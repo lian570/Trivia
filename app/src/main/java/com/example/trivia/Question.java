@@ -1,9 +1,8 @@
 package com.example.trivia;
-
+//פעולה בונה ופעולות set ן get
 public class Question {
-    private String question,a1,a2,a3,a4;
-    private int correct;
-
+    private String question,a1,a2,a3,a4; //משתנים לשאלה ולתשובות אפשריות
+    private int correct;//מספר התשובה הנכונה 1,2,3,4
     public Question(String question, String a1, String a2, String a3, String a4, int correct) {
         this.question = question;
         this.a1 = a1;
@@ -11,7 +10,9 @@ public class Question {
         this.a3 = a3;
         this.a4 = a4;
         this.correct = correct;
-    }
+
+    }    //בונה עצם מסוג שאלה-פעולה בונה
+
 
     public String getQuestion() {
         return question;
