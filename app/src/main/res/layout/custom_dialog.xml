@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="do you want to play again?"
-        android:textSize="40dp"
-        android:gravity="center"
-        ></TextView>
+        android:text="Play Again?"
+        android:textSize="40dp"></TextView>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:orientation="horizontal">
+
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
-            android:text="yes"
-            android:id="@+id/btnyes"
-            android:backgroundTint="#DA7698"></Button>
+            android:text="Yes"
+            android:backgroundTint="#E3A5A5"
+            android:id="@+id/btnYes"></Button>
+
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
-            android:text="no"
-            android:id="@+id/btnno"
-            android:backgroundTint="#DA7698"></Button>
+            android:text="No"
+            android:backgroundTint="#E3A5A5"
+            android:id="@+id/btnNo"></Button>
     </LinearLayout>
+
 </LinearLayout>

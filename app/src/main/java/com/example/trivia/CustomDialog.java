@@ -8,26 +8,33 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 
 public class CustomDialog extends Dialog implements View.OnClickListener {
-    private Button btnYes,btnNo;
-    private Context context;
+    Button btnYes, btnNo;
+    Context context;
+
     public CustomDialog(@NonNull Context context) {
         super(context);
-        setContentView(R.layout.custom_dialog);
-        this.context=context;
 
-        btnYes=findViewById(R.id.btnyes);
-        btnNo=findViewById(R.id.btnno);
-        btnNo.setOnClickListener(this);
+        setContentView(R.layout.custom_dialog);
+        this.context = context;
+
+        this.btnYes = findViewById(R.id.btnYes);
+        this.btnNo = findViewById(R.id.btnNo);
         btnYes.setOnClickListener(this);
+        btnNo.setOnClickListener(this);
     }
 
+
     @Override
-    public void onClick(View v) {
-        if (v==btnYes){
-            ((MainActivity)context).finish();
+    public void onClick(View view) {
+        if(btnYes == view)
+        {
+            dismiss(); // eliminate the dialog  מוחק את חלונית הדאילוג
+            ((GameActivity)context).reset(); //קורא לפעולה reaet מהגיים אקטיביטי ומעדכן את המשחק
         }
-        if (v==btnNo){
-            dismiss();
+
+        if(btnNo == view)
+        {
+            ((GameActivity)context).finish();
         }
     }
 }

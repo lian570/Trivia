@@ -96,4 +96,13 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         }
         nextOuestion();
     }
+
+    public void reset() {
+        this.points=0;
+        collection.initQuestions();
+        tvPoints.setText("point: "+0);
+        tvQueationNumber.setText("Queation number: "+1);
+        tvGameOver.setVisibility(View.INVISIBLE);
+        this.nextOuestion();
+    }
 }
